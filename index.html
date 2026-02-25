@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carapuz201G — Privacy Policy & Terms of Service</title>
+    <title>Carapuz201G — Discord Bot</title>
     <style>
         * {
             margin: 0;
@@ -33,18 +33,20 @@
         nav ul {
             display: flex;
             justify-content: center;
-            gap: 40px;
+            align-items: center;
+            gap: 30px;
             list-style: none;
+            flex-wrap: wrap;
         }
 
         nav ul li a {
             color: #e94560;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
-            padding: 8px 20px;
+            padding: 8px 18px;
             border-radius: 5px;
             transition: all 0.3s ease;
         }
@@ -54,11 +56,225 @@
             color: #ffffff;
         }
 
+        nav ul li a.add-bot {
+            background-color: #5865f2;
+            color: #ffffff;
+            border-radius: 20px;
+            padding: 8px 22px;
+            animation: pulse 2s infinite;
+        }
+
+        nav ul li a.add-bot:hover {
+            background-color: #4752c4;
+            transform: scale(1.05);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(88, 101, 242, 0.5); }
+            70% { box-shadow: 0 0 0 10px rgba(88, 101, 242, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(88, 101, 242, 0); }
+        }
+
         /* ===== MAIN CONTAINER ===== */
         .container {
             max-width: 860px;
             margin: 0 auto;
             padding: 100px 30px 60px;
+        }
+
+        /* ===== HERO / ABOUT ===== */
+        .hero {
+            text-align: center;
+            padding: 60px 30px;
+            margin-bottom: 50px;
+            background: linear-gradient(135deg, #16213e, #0f3460, #1a1a2e);
+            border-radius: 16px;
+            border: 1px solid #0f3460;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(233, 69, 96, 0.05) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero .bot-icon {
+            font-size: 64px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            color: #e94560;
+            margin-bottom: 10px;
+        }
+
+        .hero .tagline {
+            font-size: 18px;
+            color: #a0a0b8;
+            margin-bottom: 25px;
+        }
+
+        .hero .add-btn {
+            display: inline-block;
+            background-color: #5865f2;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 40px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(88, 101, 242, 0.4);
+        }
+
+        .hero .add-btn:hover {
+            background-color: #4752c4;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(88, 101, 242, 0.6);
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .about-card {
+            background-color: #16213e;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #0f3460;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .about-card:hover {
+            border-color: #e94560;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(233, 69, 96, 0.15);
+        }
+
+        .about-card .icon {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        .about-card h3 {
+            color: #e94560;
+            margin-bottom: 8px;
+            font-size: 17px;
+        }
+
+        .about-card p {
+            color: #a0a0b8;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .about-text {
+            background-color: #16213e;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #0f3460;
+            margin-bottom: 20px;
+        }
+
+        .about-text h2 {
+            color: #e94560;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            color: #c0c0d0;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        .about-text a {
+            color: #e94560;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .about-text a:hover {
+            color: #ff6b81;
+        }
+
+        /* ===== WARNING BOX ===== */
+        .warning-box {
+            background: linear-gradient(135deg, rgba(233, 69, 96, 0.1), rgba(233, 69, 96, 0.05));
+            border: 1px solid #e94560;
+            border-radius: 10px;
+            padding: 20px 25px;
+            margin: 25px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .warning-box .warn-icon {
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+
+        .warning-box .warn-text {
+            font-size: 14px;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .warning-box .warn-text strong {
+            color: #e94560;
+        }
+
+        /* ===== OFFICIAL BADGE ===== */
+        .official-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(88, 101, 242, 0.15);
+            border: 1px solid #5865f2;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: #8a9cf5;
+            margin-top: 15px;
+        }
+
+        .official-badge .badge-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #57f287;
+            border-radius: 50%;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
         }
 
         /* ===== HEADER ===== */
@@ -221,6 +437,12 @@
             text-decoration: none;
         }
 
+        footer .official-url {
+            margin-top: 8px;
+            font-size: 12px;
+            color: #5865f2;
+        }
+
         /* ===== RESPONSIVE ===== */
         @media (max-width: 600px) {
             .container {
@@ -228,12 +450,22 @@
             }
 
             nav ul {
-                gap: 15px;
+                gap: 10px;
+                padding: 0 10px;
             }
 
             nav ul li a {
-                font-size: 13px;
-                padding: 6px 12px;
+                font-size: 11px;
+                padding: 6px 10px;
+                letter-spacing: 0.5px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero .tagline {
+                font-size: 15px;
             }
 
             .doc-header h1 {
@@ -251,6 +483,16 @@
             .section h2 {
                 font-size: 18px;
             }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .warning-box {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -259,13 +501,120 @@
     <!-- NAVIGATION -->
     <nav>
         <ul>
+            <li><a href="#about">About</a></li>
             <li><a href="#privacy-policy">Privacy Policy</a></li>
             <li><a href="#terms-of-service">Terms of Service</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li>
+                <a href="https://discord.com/oauth2/authorize?client_id=1372950477477777548&permissions=8&integration_type=0&scope=bot"
+                   class="add-bot" target="_blank" rel="noopener noreferrer">
+                    ➕ Add Bot
+                </a>
+            </li>
         </ul>
     </nav>
 
     <div class="container">
+
+        <!-- ===================== -->
+        <!-- HERO                  -->
+        <!-- ===================== -->
+        <div class="hero">
+            <div class="hero-content">
+                <div class="bot-icon">🤖</div>
+                <h1>Carapuz201G</h1>
+                <div class="tagline">Your all-in-one Discord companion — moderation, music, translation, search & AI.</div>
+                <a href="https://discord.com/oauth2/authorize?client_id=1372950477477777548&permissions=8&integration_type=0&scope=bot"
+                   class="add-btn" target="_blank" rel="noopener noreferrer">
+                    Add to Discord
+                </a>
+                <div style="margin-top: 20px;">
+                    <div class="official-badge">
+                        <span class="badge-dot"></span>
+                        Official website: carapuz201.github.io
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================== -->
+        <!-- ABOUT BOT             -->
+        <!-- ===================== -->
+        <div id="about">
+
+            <div class="about-text">
+                <h2>👋 Hey! Meet Carapuz201G</h2>
+                <p>
+                    <strong>Carapuz201G</strong> is a free, multi-purpose Discord bot created by <strong>carapuz201</strong>.
+                    It's built to make your server life easier — whether you need to keep things in order, vibe to some music,
+                    translate a message, look something up online, or just ask AI a quick question.
+                </p>
+                <p>
+                    The bot is actively developed and maintained by a single person. No big company behind it, no corporation
+                    — just one developer who wants to make a useful tool for Discord communities.
+                </p>
+                <p>
+                    The bot is completely <strong>free to use</strong>. You can donate to support the project if you want,
+                    but it won't unlock any extra features — it's just a way to say thanks. ❤️
+                </p>
+            </div>
+
+            <!-- Feature cards -->
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="icon">🛡️</div>
+                    <h3>Moderation</h3>
+                    <p>Warnings, bans, kicks, logs — everything you need to keep your server clean and safe.</p>
+                </div>
+                <div class="about-card">
+                    <div class="icon">🎵</div>
+                    <h3>Music</h3>
+                    <p>Play your favorite tracks in voice channels. Simple, fast, no fuss.</p>
+                </div>
+                <div class="about-card">
+                    <div class="icon">🌍</div>
+                    <h3>Translation</h3>
+                    <p>Translate text between languages right inside Discord. Talk to anyone, anywhere.</p>
+                </div>
+                <div class="about-card">
+                    <div class="icon">🔍</div>
+                    <h3>Internet Search</h3>
+                    <p>Find information online without leaving Discord. Quick answers at your fingertips.</p>
+                </div>
+                <div class="about-card">
+                    <div class="icon">🧠</div>
+                    <h3>AI Assistant</h3>
+                    <p>Ask a question — get an answer. The AI is here to help you find info fast.</p>
+                </div>
+                <div class="about-card">
+                    <div class="icon">💸</div>
+                    <h3>100% Free</h3>
+                    <p>No premium, no paywalls. All features are available to everyone, always.</p>
+                </div>
+            </div>
+
+            <!-- Warning boxes -->
+            <div class="warning-box">
+                <div class="warn-icon">⚠️</div>
+                <div class="warn-text">
+                    <strong>Carapuz201G is the ONLY bot made by carapuz201.</strong>
+                    If you see any other bots claiming to be made by us — they are fake. We have no other bots.
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <div class="warn-icon">🌐</div>
+                <div class="warn-text">
+                    <strong>The ONLY official website is <a href="https://carapuz201.github.io" style="color: #5865f2;">carapuz201.github.io</a></strong>.
+                    We have no other websites, landing pages, or domains. If you find the bot or its info hosted
+                    anywhere else — it is not official and may be a scam. Stay safe!
+                </div>
+            </div>
+
+        </div>
+
+        <!-- DIVIDER -->
+        <hr class="divider">
 
         <!-- ===================== -->
         <!-- PRIVACY POLICY        -->
@@ -564,7 +913,7 @@
                 <h2>📬 Contact</h2>
                 <p><strong>Email:</strong> <a href="mailto:carapuz201@gmail.com">carapuz201@gmail.com</a></p>
                 <p><strong>Discord:</strong> <a href="https://discord.com/users/carapuz201">carapuz201</a></p>
-                <p><strong>Website:</strong> <span class="coming-soon">[Coming soon]</span></p>
+                <p><strong>Official Website:</strong> <a href="https://carapuz201.github.io">carapuz201.github.io</a></p>
             </div>
         </div>
 
@@ -572,10 +921,10 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 <a href="#">Carapuz201G</a>. All rights reserved.</p>
+        <p>&copy; 2025 <a href="https://carapuz201.github.io">Carapuz201G</a>. All rights reserved.</p>
         <p style="margin-top: 5px;">Operated by carapuz201</p>
+        <p class="official-url">🔒 Official website: carapuz201.github.io — we have no other websites or bots.</p>
     </footer>
 
 </body>
 </html>
-
