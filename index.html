@@ -1,27 +1,580 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Моя Простая Страница</title>
+    <title>Carapuz201G — Privacy Policy & Terms of Service</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a2e;
+            color: #e0e0e0;
+            line-height: 1.7;
+        }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #16213e;
+            border-bottom: 2px solid #0f3460;
+            padding: 15px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: #e94560;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #e94560;
+            color: #ffffff;
+        }
+
+        /* ===== MAIN CONTAINER ===== */
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 100px 30px 60px;
+        }
+
+        /* ===== HEADER ===== */
+        .doc-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px 30px;
+            background: linear-gradient(135deg, #16213e, #0f3460);
+            border-radius: 12px;
+            border: 1px solid #0f3460;
+        }
+
+        .doc-header h1 {
+            font-size: 36px;
+            color: #e94560;
+            margin-bottom: 8px;
+        }
+
+        .doc-header .subtitle {
+            font-size: 20px;
+            color: #a0a0b8;
+            margin-bottom: 15px;
+        }
+
+        .doc-header .meta {
+            font-size: 14px;
+            color: #7a7a95;
+        }
+
+        .doc-header .meta span {
+            color: #e94560;
+            font-weight: 600;
+        }
+
+        /* ===== SECTIONS ===== */
+        .section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background-color: #16213e;
+            border-radius: 10px;
+            border-left: 4px solid #e94560;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease;
+        }
+
+        .section:hover {
+            transform: translateX(5px);
+        }
+
+        .section h2 {
+            font-size: 22px;
+            color: #e94560;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #0f3460;
+        }
+
+        .section h2 .num {
+            color: #a0a0b8;
+            margin-right: 8px;
+        }
+
+        .section p {
+            margin-bottom: 12px;
+            color: #c0c0d0;
+            font-size: 15px;
+        }
+
+        .section ul {
+            margin: 12px 0 12px 25px;
+            color: #c0c0d0;
+            font-size: 15px;
+        }
+
+        .section ul li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .section ul li::marker {
+            color: #e94560;
+        }
+
+        .section strong {
+            color: #ffffff;
+        }
+
+        .section em {
+            color: #a0a0b8;
+        }
+
+        /* ===== DIVIDER ===== */
+        .divider {
+            height: 3px;
+            background: linear-gradient(to right, #e94560, #0f3460, transparent);
+            margin: 70px 0;
+            border: none;
+            border-radius: 3px;
+        }
+
+        /* ===== CONTACT BOX ===== */
+        .contact-box {
+            background: linear-gradient(135deg, #0f3460, #16213e);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #e94560;
+            text-align: center;
+        }
+
+        .contact-box h2 {
+            color: #e94560;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .contact-box p {
+            margin-bottom: 8px;
+            font-size: 15px;
+            color: #c0c0d0;
+        }
+
+        .contact-box a {
+            color: #e94560;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .contact-box a:hover {
+            color: #ff6b81;
+        }
+
+        .contact-box .coming-soon {
+            color: #7a7a95;
+            font-style: italic;
+        }
+
+        /* ===== HIGHLIGHT ===== */
+        .highlight {
+            background-color: rgba(233, 69, 96, 0.1);
+            border: 1px solid rgba(233, 69, 96, 0.3);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 12px 0;
+            font-size: 14px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            border-top: 1px solid #0f3460;
+            color: #7a7a95;
+            font-size: 13px;
+        }
+
+        footer a {
+            color: #e94560;
+            text-decoration: none;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 600px) {
+            .container {
+                padding: 90px 15px 40px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            nav ul li a {
+                font-size: 13px;
+                padding: 6px 12px;
+            }
+
+            .doc-header h1 {
+                font-size: 26px;
+            }
+
+            .doc-header .subtitle {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .section h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <h1>УСЛОВИЯ ПОЛЬЗОВАНИЯ (Terms of Service)</h1>
+    <!-- NAVIGATION -->
+    <nav>
+        <ul>
+            <li><a href="#privacy-policy">Privacy Policy</a></li>
+            <li><a href="#terms-of-service">Terms of Service</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <p>Приветствуем в carapuz201G! Используя нашего бота, вы соглашаетесь с этими Условиями использования. Пожалуйста, внимательно ознакомьтесь с ними.</p>
+    <div class="container">
 
-    <p>Например, свои мысли, идеи или просто информацию, которой хочу поделиться с миром.</p>
+        <!-- ===================== -->
+        <!-- PRIVACY POLICY        -->
+        <!-- ===================== -->
+        <div id="privacy-policy">
 
-    <h1>1. Принятие Условий</h1>
+            <div class="doc-header">
+                <h1>Privacy Policy</h1>
+                <div class="subtitle">Carapuz201G — Discord Bot</div>
+                <div class="meta">
+                    <strong>Last Updated:</strong> <span>July 10, 2025</span> &nbsp;|&nbsp;
+                    <strong>Effective Date:</strong> <span>July 10, 2025</span>
+                </div>
+            </div>
 
-    <p>Используя или взаимодействуя с carapuz201G ("Бот"), вы соглашаетесь соблюдать настоящие Условия использования ("Условия"). Если вы не согласны с какими-либо из этих Условий, вы не должны использовать Бота.</p>
+            <!-- Section 1 -->
+            <div class="section">
+                <h2><span class="num">1.</span> Introduction</h2>
+                <p>
+                    This Privacy Policy describes how <strong>Carapuz201G</strong> Discord bot ("the Bot"),
+                    operated by <strong>carapuz201</strong> ("we", "us", "our"), collects, uses, stores,
+                    and shares information when you interact with the Bot on the Discord platform.
+                </p>
+                <p>
+                    By using the Bot, you agree to the practices described in this Privacy Policy.
+                    If you do not agree, please remove the Bot from your server and discontinue use.
+                </p>
+            </div>
 
-    <h1>2. Описание Услуг</h1>
+            <!-- Section 2 -->
+            <div class="section">
+                <h2><span class="num">2.</span> Information We Collect</h2>
+                <p>We may collect and store the following data provided by the Discord API:</p>
+                <ul>
+                    <li><strong>User data:</strong> User IDs, usernames, display names, avatars, account creation dates, and other publicly available profile information.</li>
+                    <li><strong>Server data:</strong> Server (guild) IDs, server names, channel IDs, channel names, roles, permissions, and server configuration.</li>
+                    <li><strong>Message data:</strong> Message content, message IDs, timestamps, attachments, and embeds in channels where the Bot has access.</li>
+                    <li><strong>Interaction data:</strong> Commands used, bot interactions, voice channel activity, and moderation actions (warnings, bans, etc.).</li>
+                    <li><strong>Log data:</strong> Actions performed by users and the Bot, stored separately from user and server information.</li>
+                </ul>
+                <div class="highlight">
+                    We collect <strong>all data that the Discord API makes available</strong> to the Bot.
+                </div>
+            </div>
 
-    <p>Бот предоставляет функционал, включающий, но не ограничиваясь, прослушиванием голосовых и текстовых каналов, а также генерацией ответов с использованием искусственного интеллекта. Эти функции предназначены для улучшения взаимодействия в сообществах Discord.</p>
+            <!-- Section 3 -->
+            <div class="section">
+                <h2><span class="num">3.</span> How We Use Your Information</h2>
+                <p>We use collected data for the following purposes:</p>
+                <ul>
+                    <li>Providing and operating the Bot's core features (moderation, music playback, translation, internet search, AI assistance).</li>
+                    <li>Improving the Bot's performance and reliability.</li>
+                    <li>Maintaining moderation logs and action history.</li>
+                    <li>Debugging and troubleshooting issues.</li>
+                </ul>
+                <div class="highlight">
+                    <strong>We do not use your data for personal purposes.</strong>
+                </div>
+            </div>
 
+            <!-- Section 4 -->
+            <div class="section">
+                <h2><span class="num">4.</span> Third-Party Services and Data Sharing</h2>
+                <p>
+                    The Bot integrates with <strong>external APIs and AI services</strong> to provide its functionality
+                    (such as translation, internet search, and AI-powered responses). When you use these features,
+                    relevant data (e.g., your query or message content) <strong>may be sent to third-party service providers</strong> for processing.
+                </p>
+                <p>
+                    We may share collected data with third parties when necessary for the Bot's operation.
+                    <strong>We do not sell your data.</strong>
+                </p>
+                <p>
+                    We are not responsible for the privacy practices of third-party services.
+                    We encourage you to review their respective privacy policies.
+                </p>
+            </div>
 
+            <!-- Section 5 -->
+            <div class="section">
+                <h2><span class="num">5.</span> Data Storage and Security</h2>
+                <ul>
+                    <li>All data is stored <strong>locally on the operator's personal computer</strong>.</li>
+                    <li>Data is stored in <strong>unencrypted form</strong>.</li>
+                    <li>We take reasonable precautions to protect your data, but <strong>we cannot guarantee absolute security</strong> due to the nature of the storage method.</li>
+                </ul>
+            </div>
+
+            <!-- Section 6 -->
+            <div class="section">
+                <h2><span class="num">6.</span> Data Retention</h2>
+                <ul>
+                    <li>Data may be retained <strong>indefinitely</strong> for as long as the Bot is operational.</li>
+                    <li>Data associated with a server is <strong>automatically deleted</strong> when the Bot is removed from that server.</li>
+                    <li>Data associated with a user is <strong>automatically deleted</strong> when the Bot can no longer find the user in any mutual servers.</li>
+                </ul>
+                <div class="highlight">
+                    <strong>We do not accept manual data deletion requests.</strong>
+                    Data removal occurs only through the automatic processes described above.
+                </div>
+            </div>
+
+            <!-- Section 7 -->
+            <div class="section">
+                <h2><span class="num">7.</span> Children's Privacy</h2>
+                <p>
+                    The Bot is <strong>not intended for users under the age of 13</strong>, in compliance with
+                    Discord's Terms of Service and the Children's Online Privacy Protection Act (COPPA).
+                    We do not knowingly collect data from children under 13.
+                </p>
+                <p>
+                    If you believe a child under 13 is using the Bot, please contact us immediately.
+                </p>
+            </div>
+
+            <!-- Section 8 -->
+            <div class="section">
+                <h2><span class="num">8.</span> Your Rights</h2>
+                <p>Due to the nature of the Bot's operation:</p>
+                <ul>
+                    <li>You <strong>cannot</strong> manually request deletion of your data.</li>
+                    <li>Your data will be removed automatically as described in Section 6.</li>
+                    <li>You may contact us with questions or concerns regarding your data.</li>
+                </ul>
+            </div>
+
+            <!-- Section 9 -->
+            <div class="section">
+                <h2><span class="num">9.</span> Changes to This Policy</h2>
+                <p>
+                    We reserve the right to update this Privacy Policy at any time. Continued use of the Bot
+                    after changes constitutes acceptance of the updated policy.
+                    We recommend reviewing this page periodically.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- DIVIDER -->
+        <hr class="divider">
+
+        <!-- ===================== -->
+        <!-- TERMS OF SERVICE      -->
+        <!-- ===================== -->
+        <div id="terms-of-service">
+
+            <div class="doc-header">
+                <h1>Terms of Service</h1>
+                <div class="subtitle">Carapuz201G — Discord Bot</div>
+                <div class="meta">
+                    <strong>Last Updated:</strong> <span>July 10, 2025</span> &nbsp;|&nbsp;
+                    <strong>Effective Date:</strong> <span>July 10, 2025</span>
+                </div>
+            </div>
+
+            <!-- Section 1 -->
+            <div class="section">
+                <h2><span class="num">1.</span> Acceptance of Terms</h2>
+                <p>
+                    By adding <strong>Carapuz201G</strong> ("the Bot") to your Discord server or by using the Bot
+                    in any way, you agree to be bound by these Terms of Service ("Terms").
+                    If you do not agree to these Terms, do not use the Bot and remove it from your server.
+                </p>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="section">
+                <h2><span class="num">2.</span> Description of Service</h2>
+                <p>Carapuz201G is a multi-purpose Discord bot that provides the following features:</p>
+                <ul>
+                    <li><strong>Server moderation</strong> — warnings, bans, logging, and more.</li>
+                    <li><strong>Music playback</strong> — play music in voice channels.</li>
+                    <li><strong>Text translation</strong> — translate text between languages.</li>
+                    <li><strong>Internet search</strong> — find information online.</li>
+                    <li><strong>AI-powered assistant</strong> — designed to help users quickly find answers to questions.</li>
+                </ul>
+                <p>The Bot uses <strong>external APIs and AI services</strong> to deliver its functionality.</p>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="section">
+                <h2><span class="num">3.</span> Eligibility</h2>
+                <p>
+                    You must be at least <strong>13 years of age</strong> to use the Bot, in accordance with
+                    Discord's Terms of Service. By using the Bot, you confirm that you meet this age requirement.
+                </p>
+            </div>
+
+            <!-- Section 4 -->
+            <div class="section">
+                <h2><span class="num">4.</span> Donations</h2>
+                <p>
+                    The Bot is provided <strong>free of charge</strong>. Users may make voluntary donations to
+                    support the development.
+                </p>
+                <div class="highlight">
+                    <strong>Donations do not grant any additional features, privileges, or benefits.</strong>
+                    All donations are non-refundable.
+                </div>
+            </div>
+
+            <!-- Section 5 -->
+            <div class="section">
+                <h2><span class="num">5.</span> Prohibited Use</h2>
+                <p>When using the Bot, you agree <strong>NOT</strong> to:</p>
+                <ul>
+                    <li><strong>Spam</strong> commands or interactions with the Bot.</li>
+                    <li><strong>Abuse or exploit</strong> the Bot's features in any way.</li>
+                    <li><strong>Violate Discord's Terms of Service</strong> or Community Guidelines while using the Bot.</li>
+                    <li><strong>Manipulate the AI</strong> to produce aggressive, harmful, offensive, or inappropriate responses.</li>
+                    <li><strong>Override the AI's intended behavior</strong> by giving it instructions to respond according to your own rules, bypass its guidelines, or act outside its designed purpose.</li>
+                    <li><strong>Use the AI for any purpose other than its intended function</strong> — which is to help users quickly find answers to questions.</li>
+                    <li>Attempt to <strong>reverse-engineer, overload, or interfere</strong> with the Bot's operation.</li>
+                    <li>Use the Bot for any <strong>illegal activity</strong> under applicable law.</li>
+                </ul>
+                <div class="highlight">
+                    The AI component is designed solely to assist users in finding information.
+                    Any attempt to make it behave differently than intended is a violation of these Terms.
+                </div>
+            </div>
+
+            <!-- Section 6 -->
+            <div class="section">
+                <h2><span class="num">6.</span> Enforcement and Termination</h2>
+                <p>We reserve the right to:</p>
+                <ul>
+                    <li><strong>Block any user</strong> from using the Bot, at our sole discretion, with or without notice.</li>
+                    <li><strong>Block the Bot's functionality on any server</strong>, at our sole discretion, with or without notice.</li>
+                    <li><strong>Terminate or suspend</strong> the Bot's service entirely at any time.</li>
+                </ul>
+                <p>
+                    Violations of these Terms, Discord's Terms of Service, or any behavior we deem inappropriate
+                    may result in immediate blocking without prior warning.
+                </p>
+            </div>
+
+            <!-- Section 7 -->
+            <div class="section">
+                <h2><span class="num">7.</span> Availability and Uptime</h2>
+                <ul>
+                    <li>The Bot is provided on an <strong>"as-is"</strong> and <strong>"as-available"</strong> basis.</li>
+                    <li><strong>We do not guarantee</strong> uninterrupted, continuous, or error-free operation.</li>
+                    <li>The Bot <strong>may go offline at any time</strong> without prior notice for any reason, including but not limited to: maintenance, updates, technical failures, or discontinuation.</li>
+                    <li>We are <strong>not liable</strong> for any damages or losses resulting from downtime or unavailability.</li>
+                </ul>
+            </div>
+
+            <!-- Section 8 -->
+            <div class="section">
+                <h2><span class="num">8.</span> Limitation of Liability</h2>
+                <p>To the fullest extent permitted by law:</p>
+                <ul>
+                    <li>The Bot is provided <strong>without any warranties</strong>, express or implied.</li>
+                    <li>We are <strong>not responsible</strong> for any direct, indirect, incidental, or consequential damages arising from the use or inability to use the Bot.</li>
+                    <li>We are <strong>not responsible</strong> for any actions taken by the AI, including inaccurate or misleading responses.</li>
+                    <li>We are <strong>not responsible</strong> for any data loss, server issues, or moderation actions performed by the Bot.</li>
+                </ul>
+            </div>
+
+            <!-- Section 9 -->
+            <div class="section">
+                <h2><span class="num">9.</span> Third-Party Services</h2>
+                <p>
+                    The Bot relies on third-party APIs and AI services. We are <strong>not responsible</strong>
+                    for the availability, accuracy, or conduct of these third-party services.
+                    Use of features powered by third parties is also subject to their respective terms and policies.
+                </p>
+            </div>
+
+            <!-- Section 10 -->
+            <div class="section">
+                <h2><span class="num">10.</span> Governing Law</h2>
+                <p>
+                    These Terms are governed by and construed in accordance with the <strong>laws of Ukraine</strong>.
+                    Any disputes arising from these Terms shall be resolved under the jurisdiction of Ukrainian courts.
+                </p>
+            </div>
+
+            <!-- Section 11 -->
+            <div class="section">
+                <h2><span class="num">11.</span> Changes to These Terms</h2>
+                <p>
+                    We reserve the right to modify these Terms at any time without prior notice.
+                    Continued use of the Bot after any changes constitutes acceptance of the updated Terms.
+                    We recommend reviewing these Terms periodically.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- ===================== -->
+        <!-- CONTACT               -->
+        <!-- ===================== -->
+        <div id="contact" style="margin-top: 50px;">
+            <div class="contact-box">
+                <h2>📬 Contact</h2>
+                <p><strong>Email:</strong> <a href="mailto:carapuz201@gmail.com">carapuz201@gmail.com</a></p>
+                <p><strong>Discord:</strong> <a href="https://discord.com/users/carapuz201">carapuz201</a></p>
+                <p><strong>Website:</strong> <span class="coming-soon">[Coming soon]</span></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 <a href="#">Carapuz201G</a>. All rights reserved.</p>
+        <p style="margin-top: 5px;">Operated by carapuz201</p>
+    </footer>
 
 </body>
 </html>
