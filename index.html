@@ -34,7 +34,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 30px;
+            gap: 25px;
             list-style: none;
             flex-wrap: wrap;
         }
@@ -67,6 +67,19 @@
         nav ul li a.add-bot:hover {
             background-color: #4752c4;
             transform: scale(1.05);
+        }
+
+        nav ul li a.support-server {
+            background-color: rgba(87, 242, 135, 0.15);
+            color: #57f287;
+            border: 1px solid #57f287;
+            border-radius: 20px;
+            padding: 8px 22px;
+        }
+
+        nav ul li a.support-server:hover {
+            background-color: #57f287;
+            color: #1a1a2e;
         }
 
         @keyframes pulse {
@@ -132,6 +145,14 @@
             margin-bottom: 25px;
         }
 
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
         .hero .add-btn {
             display: inline-block;
             background-color: #5865f2;
@@ -151,6 +172,72 @@
             background-color: #4752c4;
             transform: translateY(-2px);
             box-shadow: 0 6px 25px rgba(88, 101, 242, 0.6);
+        }
+
+        .hero .server-btn {
+            display: inline-block;
+            background-color: transparent;
+            color: #57f287;
+            text-decoration: none;
+            padding: 14px 40px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: 2px solid #57f287;
+        }
+
+        .hero .server-btn:hover {
+            background-color: #57f287;
+            color: #1a1a2e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(87, 242, 135, 0.4);
+        }
+
+        /* ===== BADGES ===== */
+        .badges {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .official-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(88, 101, 242, 0.15);
+            border: 1px solid #5865f2;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: #8a9cf5;
+        }
+
+        .official-badge a {
+            color: #8a9cf5;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .official-badge a:hover {
+            color: #b0bcff;
+        }
+
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #57f287;
+            border-radius: 50%;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
         }
 
         /* ===== ABOUT SECTION ===== */
@@ -250,31 +337,14 @@
             color: #e94560;
         }
 
-        /* ===== OFFICIAL BADGE ===== */
-        .official-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background-color: rgba(88, 101, 242, 0.15);
-            border: 1px solid #5865f2;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 13px;
+        .warning-box .warn-text a {
+            color: #5865f2;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .warning-box .warn-text a:hover {
             color: #8a9cf5;
-            margin-top: 15px;
-        }
-
-        .official-badge .badge-dot {
-            width: 8px;
-            height: 8px;
-            background-color: #57f287;
-            border-radius: 50%;
-            animation: blink 1.5s infinite;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
         }
 
         /* ===== HEADER ===== */
@@ -407,11 +477,6 @@
             color: #ff6b81;
         }
 
-        .contact-box .coming-soon {
-            color: #7a7a95;
-            font-style: italic;
-        }
-
         /* ===== HIGHLIGHT ===== */
         .highlight {
             background-color: rgba(233, 69, 96, 0.1);
@@ -450,14 +515,20 @@
             }
 
             nav ul {
-                gap: 10px;
+                gap: 8px;
                 padding: 0 10px;
             }
 
             nav ul li a {
-                font-size: 11px;
-                padding: 6px 10px;
-                letter-spacing: 0.5px;
+                font-size: 10px;
+                padding: 6px 8px;
+                letter-spacing: 0.3px;
+            }
+
+            nav ul li a.add-bot,
+            nav ul li a.support-server {
+                padding: 6px 14px;
+                font-size: 10px;
             }
 
             .hero h1 {
@@ -466,6 +537,17 @@
 
             .hero .tagline {
                 font-size: 15px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero .add-btn,
+            .hero .server-btn {
+                padding: 12px 30px;
+                font-size: 14px;
             }
 
             .doc-header h1 {
@@ -493,6 +575,15 @@
                 align-items: center;
                 text-align: center;
             }
+
+            .badges {
+                padding: 0 10px;
+            }
+
+            .official-badge {
+                font-size: 11px;
+                padding: 6px 12px;
+            }
         }
     </style>
 </head>
@@ -505,6 +596,12 @@
             <li><a href="#privacy-policy">Privacy Policy</a></li>
             <li><a href="#terms-of-service">Terms of Service</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li>
+                <a href="https://discord.gg/pBh4rRK3TT"
+                   class="support-server" target="_blank" rel="noopener noreferrer">
+                    💬 Support Server
+                </a>
+            </li>
             <li>
                 <a href="https://discord.com/oauth2/authorize?client_id=1372950477477777548&permissions=8&integration_type=0&scope=bot"
                    class="add-bot" target="_blank" rel="noopener noreferrer">
@@ -524,14 +621,29 @@
                 <div class="bot-icon">🤖</div>
                 <h1>Carapuz201G</h1>
                 <div class="tagline">Your all-in-one Discord companion — moderation, music, translation, search & AI.</div>
-                <a href="https://discord.com/oauth2/authorize?client_id=1372950477477777548&permissions=8&integration_type=0&scope=bot"
-                   class="add-btn" target="_blank" rel="noopener noreferrer">
-                    Add to Discord
-                </a>
-                <div style="margin-top: 20px;">
+
+                <div class="hero-buttons">
+                    <a href="https://discord.com/oauth2/authorize?client_id=1372950477477777548&permissions=8&integration_type=0&scope=bot"
+                       class="add-btn" target="_blank" rel="noopener noreferrer">
+                        Add to Discord
+                    </a>
+                    <a href="https://discord.gg/pBh4rRK3TT"
+                       class="server-btn" target="_blank" rel="noopener noreferrer">
+                        Join Support Server
+                    </a>
+                </div>
+
+                <div class="badges">
                     <div class="official-badge">
                         <span class="badge-dot"></span>
                         Official website: carapuz201.github.io
+                    </div>
+                    <div class="official-badge">
+                        <span class="badge-dot"></span>
+                        Official server:
+                        <a href="https://discord.gg/pBh4rRK3TT" target="_blank" rel="noopener noreferrer">
+                            discord.gg/pBh4rRK3TT
+                        </a>
                     </div>
                 </div>
             </div>
@@ -556,6 +668,11 @@
                 <p>
                     The bot is completely <strong>free to use</strong>. You can donate to support the project if you want,
                     but it won't unlock any extra features — it's just a way to say thanks. ❤️
+                </p>
+                <p>
+                    Need help or have a question? Join our
+                    <a href="https://discord.gg/pBh4rRK3TT" target="_blank" rel="noopener noreferrer">official support server</a>
+                    — we're always happy to help!
                 </p>
             </div>
 
@@ -605,9 +722,20 @@
             <div class="warning-box">
                 <div class="warn-icon">🌐</div>
                 <div class="warn-text">
-                    <strong>The ONLY official website is <a href="https://carapuz201.github.io" style="color: #5865f2;">carapuz201.github.io</a></strong>.
+                    <strong>The ONLY official website is
+                        <a href="https://carapuz201.github.io" target="_blank" rel="noopener noreferrer">carapuz201.github.io</a></strong>.
                     We have no other websites, landing pages, or domains. If you find the bot or its info hosted
                     anywhere else — it is not official and may be a scam. Stay safe!
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <div class="warn-icon">💬</div>
+                <div class="warn-text">
+                    <strong>The ONLY official Discord server is
+                        <a href="https://discord.gg/pBh4rRK3TT" target="_blank" rel="noopener noreferrer">discord.gg/pBh4rRK3TT</a></strong>.
+                    We have no other support servers or community servers.
+                    If someone invites you to a different server claiming to be us — it's fake.
                 </div>
             </div>
 
@@ -765,8 +893,8 @@
                 <h1>Terms of Service</h1>
                 <div class="subtitle">Carapuz201G — Discord Bot</div>
                 <div class="meta">
-                    <strong>Last Updated:</strong> <span>July 10, 2025</span> &nbsp;|&nbsp;
-                    <strong>Effective Date:</strong> <span>July 10, 2025</span>
+                    <strong>Last Updated:</strong> <span>February 25, 2026</span> &nbsp;|&nbsp;
+                    <strong>Effective Date:</strong> <span>March 01, 2026</span>
                 </div>
             </div>
 
@@ -913,7 +1041,8 @@
                 <h2>📬 Contact</h2>
                 <p><strong>Email:</strong> <a href="mailto:carapuz201@gmail.com">carapuz201@gmail.com</a></p>
                 <p><strong>Discord:</strong> <a href="https://discord.com/users/carapuz201">carapuz201</a></p>
-                <p><strong>Official Website:</strong> <a href="https://carapuz201.github.io">carapuz201.github.io</a></p>
+                <p><strong>Support Server:</strong> <a href="https://discord.gg/pBh4rRK3TT" target="_blank" rel="noopener noreferrer">discord.gg/pBh4rRK3TT</a></p>
+                <p><strong>Official Website:</strong> <a href="https://carapuz201.github.io" target="_blank" rel="noopener noreferrer">carapuz201.github.io</a></p>
             </div>
         </div>
 
@@ -923,7 +1052,9 @@
     <footer>
         <p>&copy; 2025 <a href="https://carapuz201.github.io">Carapuz201G</a>. All rights reserved.</p>
         <p style="margin-top: 5px;">Operated by carapuz201</p>
-        <p class="official-url">🔒 Official website: carapuz201.github.io — we have no other websites or bots.</p>
+        <p class="official-url">
+            🔒 Official website: carapuz201.github.io | Official server: discord.gg/pBh4rRK3TT — we have no other websites, servers, or bots.
+        </p>
     </footer>
 
 </body>
