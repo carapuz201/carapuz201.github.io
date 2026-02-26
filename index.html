@@ -83,9 +83,15 @@
         }
 
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(88, 101, 242, 0.5); }
-            70% { box-shadow: 0 0 0 10px rgba(88, 101, 242, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(88, 101, 242, 0); }
+            0% {
+                box-shadow: 0 0 0 0 rgba(88, 101, 242, 0.5);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(88, 101, 242, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(88, 101, 242, 0);
+            }
         }
 
         /* ===== MAIN CONTAINER ===== */
@@ -95,7 +101,7 @@
             padding: 100px 30px 60px;
         }
 
-        /* ===== HERO ===== */
+        /* ===== HERO / ABOUT ===== */
         .hero {
             text-align: center;
             padding: 60px 30px;
@@ -119,8 +125,12 @@
         }
 
         @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         .hero-content {
@@ -236,8 +246,12 @@
         }
 
         @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.4;
+            }
         }
 
         /* ===== ABOUT SECTION ===== */
@@ -436,6 +450,23 @@
             color: #a0a0b8;
         }
 
+        .section a {
+            color: #e94560;
+            text-decoration: none;
+        }
+
+        .section a:hover {
+            color: #ff6b81;
+        }
+
+        .section code {
+            background-color: rgba(233, 69, 96, 0.15);
+            color: #e94560;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
         /* ===== DIVIDER ===== */
         .divider {
             height: 3px;
@@ -495,6 +526,16 @@
             margin: 12px 0;
             font-size: 14px;
             color: #57f287;
+        }
+
+        .highlight-blue {
+            background-color: rgba(88, 101, 242, 0.1);
+            border: 1px solid rgba(88, 101, 242, 0.3);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 12px 0;
+            font-size: 14px;
+            color: #8a9cf5;
         }
 
         /* ===== FOOTER ===== */
@@ -599,7 +640,7 @@
 </head>
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- ===== NAVIGATION ===== -->
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
@@ -623,14 +664,12 @@
 
     <div class="container">
 
-        <!-- ===================== -->
-        <!-- HERO                  -->
-        <!-- ===================== -->
+        <!-- ===== HERO ===== -->
         <div class="hero">
             <div class="hero-content">
                 <div class="bot-icon">🤖</div>
                 <h1>Carapuz201G</h1>
-                <div class="tagline">Your all-in-one Discord companion — moderation, music, translation, search & AI.</div>
+                <div class="tagline">Your all-in-one Discord companion — moderation, economy, music, translation, search & AI.</div>
 
                 <div class="hero-buttons">
                     <a href="https://discord.com/oauth2/authorize?client_id=1372950477477777548&permissions=8&integration_type=0&scope=bot"
@@ -659,17 +698,15 @@
             </div>
         </div>
 
-        <!-- ===================== -->
-        <!-- ABOUT BOT             -->
-        <!-- ===================== -->
+        <!-- ===== ABOUT BOT ===== -->
         <div id="about">
 
             <div class="about-text">
                 <h2>👋 Hey! Meet Carapuz201G</h2>
                 <p>
                     <strong>Carapuz201G</strong> is a free, multi-purpose Discord bot created by <strong>carapuz201</strong>.
-                    It's built to make your server life easier — whether you need to keep things in order, vibe to some music,
-                    translate a message, look something up online, or just ask AI a quick question.
+                    It's built to make your server life easier — whether you need to keep things in order, manage a virtual economy,
+                    vibe to some music, translate a message, look something up online, or just ask AI a quick question.
                 </p>
                 <p>
                     The bot is actively developed and maintained by a single person. No big company behind it, no corporation
@@ -682,7 +719,7 @@
                 <p>
                     Need help or have a question? Join our
                     <a href="https://discord.gg/pBh4rRK3TT" target="_blank" rel="noopener noreferrer">official support server</a>
-                    — we're always happy to help!
+                    or use the <strong>/support</strong> command — we're always happy to help!
                 </p>
             </div>
 
@@ -691,7 +728,12 @@
                 <div class="about-card">
                     <div class="icon">🛡️</div>
                     <h3>Moderation</h3>
-                    <p>Warnings, bans, kicks, logs — everything you need to keep your server clean and safe.</p>
+                    <p>Warnings, bans, kicks, anti-raid, logs — everything you need to keep your server clean and safe.</p>
+                </div>
+                <div class="about-card">
+                    <div class="icon">💰</div>
+                    <h3>Economy</h3>
+                    <p>Virtual currency, shops, casino, workers, investments, quests — a full economy system for your server.</p>
                 </div>
                 <div class="about-card">
                     <div class="icon">🎵</div>
@@ -704,14 +746,9 @@
                     <p>Translate text between languages right inside Discord. Talk to anyone, anywhere.</p>
                 </div>
                 <div class="about-card">
-                    <div class="icon">🔍</div>
-                    <h3>Internet Search</h3>
-                    <p>Find information online without leaving Discord. Quick answers at your fingertips.</p>
-                </div>
-                <div class="about-card">
                     <div class="icon">🧠</div>
                     <h3>AI Assistant</h3>
-                    <p>Ask a question — get an answer. The AI is here to help you find info fast.</p>
+                    <p>Local AI (Ollama) + Google Gemini — ask questions, summarize, correct text, and more.</p>
                 </div>
                 <div class="about-card">
                     <div class="icon">💸</div>
@@ -751,12 +788,12 @@
 
         </div>
 
-        <!-- DIVIDER -->
+        <!-- ===== DIVIDER ===== -->
         <hr class="divider">
 
-        <!-- ===================== -->
-        <!-- PRIVACY POLICY        -->
-        <!-- ===================== -->
+        <!-- ============================================ -->
+        <!-- PRIVACY POLICY (based on YOUR original text) -->
+        <!-- ============================================ -->
         <div id="privacy-policy">
 
             <div class="doc-header">
@@ -768,7 +805,7 @@
                 </div>
             </div>
 
-            <!-- Section 1 -->
+            <!-- PP 1 — Introduction -->
             <div class="section">
                 <h2><span class="num">1.</span> Introduction</h2>
                 <p>
@@ -782,102 +819,149 @@
                 </p>
             </div>
 
-            <!-- Section 2 -->
+            <!-- PP 2 — What data we collect -->
             <div class="section">
-                <h2><span class="num">2.</span> Information We Collect</h2>
-                <p>We collect and store the following data provided by the Discord API, limited to what is necessary for the Bot's functionality:</p>
+                <h2><span class="num">2.</span> What Data We Collect</h2>
+                <p>This bot collects and stores the following data:</p>
                 <ul>
-                    <li><strong>Server data:</strong> Server (guild) IDs, channel IDs, role IDs, and server configuration settings.</li>
-                    <li><strong>Moderation data:</strong> Warnings, bans, mutes, and related moderation actions associated with user IDs.</li>
-                    <li><strong>User data:</strong> User IDs and interaction data necessary for Bot features (e.g., game statistics, AI queries).</li>
-                    <li><strong>Temporary data:</strong> Anti-raid server backups (including channel structure, roles, and recent messages) stored for a maximum of 1 hour before automatic deletion.</li>
-                    <li><strong>Log data:</strong> Actions performed by users and the Bot, stored separately from server and user data.</li>
+                    <li><strong>User IDs</strong> — for economy system, warnings, verification, and moderation.</li>
+                    <li><strong>Server IDs and settings</strong> — for server configuration (autoroles, filters, AI channel, reports, etc.).</li>
+                    <li><strong>Economy data</strong> — balance, workers, utilities, quest progress, investments.</li>
+                    <li><strong>Warning counts</strong> — number of warnings per user per server.</li>
+                    <li><strong>Verification data</strong> — linked Roblox/Steam usernames (temporarily, during verification process).</li>
+                    <li><strong>Message content in AI channels</strong> — messages sent in designated AI channels are processed by a local AI model (Ollama) for generating responses. Message history is stored only in memory and is cleared when the bot restarts.</li>
+                    <li><strong>Temporary server backups</strong> — encrypted snapshots of server structure and recent messages (up to 50 per channel) are stored temporarily for the AntiRaid feature. Backups are automatically deleted after 1 hour.</li>
                 </ul>
                 <div class="highlight">
-                    We collect only the data <strong>necessary for the Bot's intended functionality</strong>. We do not permanently store message content. Temporary anti-raid backups that include message content are automatically deleted within 1 hour.
+                    We collect only the data <strong>necessary for the Bot's intended functionality</strong>.
+                    We do not permanently store message content. Temporary anti-raid backups that include message content
+                    are encrypted and automatically deleted within 1 hour. AI chat history exists only in RAM and is cleared on restart.
                 </div>
             </div>
 
-            <!-- Section 3 -->
+            <!-- PP 3 — How we use data -->
             <div class="section">
-                <h2><span class="num">3.</span> How We Use Your Information</h2>
-                <p>We use collected data for the following purposes:</p>
+                <h2><span class="num">3.</span> How We Use Data</h2>
                 <ul>
-                    <li>Providing and operating the Bot's core features (moderation, music playback, translation, internet search, AI assistance).</li>
-                    <li>Improving the Bot's performance and reliability.</li>
-                    <li>Maintaining moderation logs and action history.</li>
-                    <li>Protecting servers from raids and malicious activity.</li>
-                    <li>Debugging and troubleshooting issues.</li>
+                    <li>Economy data is used to provide the virtual economy features (balance, shop, casino, work, etc.).</li>
+                    <li>Server settings are used to configure bot features for each server.</li>
+                    <li>Warning counts are used for the moderation system.</li>
+                    <li>AI channel messages are sent to a local AI model (Ollama) to generate responses. Messages are <strong>NOT</strong> used for training AI models.</li>
+                    <li>Backup data is used exclusively for the AntiRaid server restoration feature.</li>
+                    <li>Verification data is used to link and verify external accounts (Roblox/Steam) during the verification process.</li>
+                    <li>Data may also be used for debugging and troubleshooting to maintain and improve the Bot's performance.</li>
                 </ul>
                 <div class="highlight">
-                    <strong>We do not use your data for personal purposes, advertising, marketing, or profiling.</strong>
+                    <strong>We do NOT use message content or any user data to train AI or machine learning models.</strong>
+                    The AI feature only sends user queries to AI services for processing and receiving responses.
+                    No data is used for model training purposes.
+                </div>
+                <div class="highlight">
+                    <strong>We do not use your data for personal purposes, advertising, marketing, profiling, or any form of monetization.</strong>
                 </div>
             </div>
 
-            <!-- Section 4 -->
+            <!-- PP 4 — Data sharing -->
             <div class="section">
-                <h2><span class="num">4.</span> Third-Party Services and Data Sharing</h2>
+                <h2><span class="num">4.</span> Data Sharing</h2>
                 <p>
-                    The Bot integrates with <strong>external APIs and AI services</strong> to provide its functionality
-                    (such as translation, internet search, and AI-powered responses). When you use these features,
-                    only the <strong>minimum data required</strong> (e.g., your query or message content)
-                    is sent to third-party service providers for processing.
+                    We do <strong>NOT</strong> sell, share, or transfer your data to any third parties,
+                    data brokers, advertising networks, or any monetization services.
                 </p>
-                <p>We may share collected data with third parties <strong>ONLY</strong> in the following cases:</p>
+                <p>Data may be shared with the following services <strong>solely for providing Bot functionality</strong>:</p>
                 <ul>
-                    <li><strong>Service Providers:</strong> Third-party APIs necessary for the Bot's functionality (translation, search, AI services). Only the minimum data required for processing is shared.</li>
-                    <li><strong>Legal Requirements:</strong> When required by applicable law, regulation, court order, or governmental authority (e.g., law enforcement requests).</li>
-                    <li><strong>User Request:</strong> When you explicitly ask us to share your data with a specific third party.</li>
+                    <li><strong>Local AI model (Ollama)</strong> — messages from AI channels are processed locally on the bot's server. No data is sent to external AI services for this feature.</li>
+                    <li><strong>Google Gemini API</strong> — used for specific commands (<code>/correct</code>, <code>/summarize</code>, <code>/ask</code>, <code>/weather</code>, <code>/news</code>). Only the text you provide in commands is sent.</li>
+                    <li><strong>Google Custom Search API</strong> — used for the <code>/search</code> command. Only your search query is sent.</li>
+                </ul>
+                <p>Data may also be shared in the following cases:</p>
+                <ul>
+                    <li><strong>Legal Requirements</strong> — when required by applicable law, regulation, court order, or governmental authority (e.g., law enforcement requests).</li>
+                    <li><strong>User Request</strong> — when you explicitly ask us to share your data with a specific third party.</li>
                 </ul>
                 <div class="highlight">
-                    <strong>We do NOT sell, rent, or trade your data.</strong>
+                    <strong>We do NOT sell, rent, license, or trade your data. We do NOT send data to data brokers, advertising networks, or any monetization services.</strong>
                 </div>
             </div>
 
-            <!-- Section 5 -->
+            <!-- PP 5 — Data storage and security -->
             <div class="section">
                 <h2><span class="num">5.</span> Data Storage and Security</h2>
                 <ul>
-                    <li>All data is stored <strong>locally on the operator's personal computer</strong>.</li>
-                    <li>All stored data is <strong>encrypted at rest using AES-256 encryption</strong>.</li>
-                    <li>Encryption keys are stored separately and securely.</li>
+                    <li>All persistent data is stored <strong>locally on the operator's personal computer</strong>.</li>
+                    <li>All persistent data is encrypted using <strong>AES-256-CBC</strong> encryption with <strong>HMAC-SHA256</strong> integrity verification.</li>
+                    <li>Encryption keys are stored <strong>separately</strong> from the data.</li>
+                    <li>Temporary backups are <strong>encrypted</strong> and automatically deleted after 1 hour.</li>
+                    <li>AI chat history is stored only in <strong>RAM</strong> and cleared on bot restart.</li>
                     <li>We implement reasonable technical precautions to protect your data from unauthorized access, disclosure, or destruction.</li>
                 </ul>
                 <div class="highlight-green">
-                    🔐 Your data is <strong>encrypted</strong>. Even in the unlikely event of unauthorized access to our storage, the data cannot be read without the encryption key.
+                    🔐 Your data is <strong>encrypted at rest</strong>. Even in the unlikely event of unauthorized access
+                    to our storage, the data cannot be read without the encryption key.
                 </div>
             </div>
 
-            <!-- Section 6 -->
+            <!-- PP 6 — Data Breach Notification (NEW — required by Discord) -->
             <div class="section">
-                <h2><span class="num">6.</span> Data Retention and Deletion</h2>
+                <h2><span class="num">6.</span> Data Breach Notification</h2>
+                <p>In the unlikely event of unauthorized access to, or a breach of, stored data:</p>
+                <ul>
+                    <li>We will <strong>promptly notify affected users</strong> through available communication channels (including our official Discord support server).</li>
+                    <li>We will <strong>promptly notify Discord</strong> and provide all requested information about the incident.</li>
+                    <li>We will <strong>immediately take action</strong> to contain and remediate the breach.</li>
+                    <li>We will cooperate with Discord and comply with all applicable laws and regulations regarding data breach notification.</li>
+                </ul>
+            </div>
+
+            <!-- PP 7 — Your rights — Data deletion -->
+            <div class="section">
+                <h2><span class="num">7.</span> Your Rights — Data Deletion</h2>
                 <p><strong>Automatic deletion:</strong></p>
                 <ul>
-                    <li>Anti-raid backup data is <strong>automatically deleted within 1 hour</strong> of creation.</li>
+                    <li>AntiRaid backup data is <strong>automatically deleted within 1 hour</strong> of creation.</li>
+                    <li>AI chat history is <strong>automatically cleared</strong> when the Bot restarts.</li>
+                    <li>Verification data is <strong>automatically deleted</strong> after the verification process is complete.</li>
                     <li>Data associated with a server is <strong>automatically deleted</strong> when the Bot is removed from that server.</li>
                     <li>Data associated with a user is <strong>automatically deleted</strong> when the Bot can no longer find the user in any mutual servers.</li>
                 </ul>
-                <p><strong>Manual deletion:</strong></p>
+                <p><strong>Manual deletion — /deletedata command:</strong></p>
+                <p>You can request deletion of all your data at any time using the <strong>/deletedata</strong> command. This will permanently remove:</p>
                 <ul>
-                    <li>Users can request deletion of their <strong>personal data</strong> (game statistics, AI history, personal settings) by using the <strong>/deletedata</strong> command.</li>
-                    <li>Deletion requests are processed <strong>immediately</strong>.</li>
+                    <li>Economy data (balance, workers, utilities, quests)</li>
+                    <li>Warning history</li>
+                    <li>Investment records</li>
+                    <li>Verification data</li>
+                    <li>Your messages from encrypted backups</li>
                 </ul>
+                <p>Server administrators can also delete data for specific users using <strong>/deletedata</strong> with the user parameter.</p>
                 <p><strong>Data NOT subject to user deletion requests:</strong></p>
                 <ul>
-                    <li><strong>Moderation records</strong> (warnings, bans, mutes) — these are server administrative data created by server moderators and belong to the server, not the individual user.</li>
-                    <li><strong>Server configuration</strong> — these settings belong to the server.</li>
+                    <li><strong>Server configuration</strong> — these settings belong to the server and are managed by server administrators. They are automatically deleted when the Bot is removed from the server.</li>
                 </ul>
                 <div class="highlight">
-                    Moderation records (warnings, bans, mutes) are considered <strong>server administrative data</strong> and are managed by server administrators. Users may contact server administrators to discuss moderation records. These records are automatically deleted when the Bot is removed from the server.
+                    All user data subject to deletion is removed <strong>immediately</strong> upon request.
                 </div>
             </div>
 
-            <!-- Section 7 -->
+            <!-- PP 8 — Cmail -->
             <div class="section">
-                <h2><span class="num">7.</span> Children's Privacy</h2>
+                <h2><span class="num">8.</span> Cmail (Messaging System)</h2>
                 <p>
-                    The Bot is <strong>not intended for users under the age of 13</strong>, in compliance with
-                    Discord's Terms of Service and the Children's Online Privacy Protection Act (COPPA).
+                    The <strong>/cmail</strong> feature allows users to send messages to other users through the bot.
+                </p>
+                <ul>
+                    <li>Users must <strong>explicitly opt-in</strong> to receive cmail messages using the <strong>/cmail_toggle</strong> command.</li>
+                    <li>Users can <strong>opt-out at any time</strong> using <strong>/cmail_toggle</strong> or the <strong>"Unsubscribe"</strong> button on received messages.</li>
+                    <li>Cmail messages are delivered only to users who have opted in.</li>
+                </ul>
+            </div>
+
+            <!-- PP 9 — Children's privacy -->
+            <div class="section">
+                <h2><span class="num">9.</span> Children's Privacy</h2>
+                <p>
+                    This bot is <strong>not directed at children under 13 years of age</strong>,
+                    in compliance with Discord's Terms of Service and the Children's Online Privacy Protection Act (COPPA).
                     We do not knowingly collect data from children under 13.
                 </p>
                 <p>
@@ -885,36 +969,48 @@
                 </p>
             </div>
 
-            <!-- Section 8 -->
+            <!-- PP 10 — Your Rights (expanded) -->
             <div class="section">
-                <h2><span class="num">8.</span> Your Rights</h2>
+                <h2><span class="num">10.</span> Your Rights</h2>
                 <p>You have the following rights regarding your data:</p>
                 <ul>
-                    <li>✅ <strong>Right to deletion</strong> — use the <strong>/deletedata</strong> command to delete your personal data (game statistics, AI history, personal settings).</li>
+                    <li>✅ <strong>Right to deletion</strong> — use the <strong>/deletedata</strong> command to delete your personal data.</li>
                     <li>✅ <strong>Right to information</strong> — contact us to ask what data we store about you.</li>
+                    <li>✅ <strong>Right to opt-out</strong> — use <strong>/cmail_toggle</strong> to opt-out of the Cmail messaging system.</li>
                     <li>✅ <strong>Right to stop processing</strong> — remove the Bot from your server or leave servers where the Bot is present.</li>
-                    <li>ℹ️ <strong>Moderation data</strong> — contact your server administrators regarding moderation records (warnings, bans, mutes), as these belong to the server.</li>
+                    <li>✅ <strong>Right to report</strong> — use the <strong>/bugreport</strong> command to report bugs or violations related to the Bot.</li>
                 </ul>
             </div>
 
-            <!-- Section 9 -->
+            <!-- PP 11 — Changes to this policy -->
             <div class="section">
-                <h2><span class="num">9.</span> Changes to This Policy</h2>
+                <h2><span class="num">11.</span> Changes to This Policy</h2>
                 <p>
-                    We reserve the right to update this Privacy Policy at any time. Continued use of the Bot
-                    after changes constitutes acceptance of the updated policy.
-                    We recommend reviewing this page periodically.
+                    We may update this Privacy Policy from time to time. Continued use of the bot after changes
+                    constitutes acceptance of the updated policy. We recommend reviewing this page periodically.
                 </p>
+            </div>
+
+            <!-- PP 12 — Contact -->
+            <div class="section">
+                <h2><span class="num">12.</span> Contact</h2>
+                <p>If you have questions about this Privacy Policy, you can:</p>
+                <ul>
+                    <li>Use the <strong>/support</strong> or <strong>/bugreport</strong> command in Discord</li>
+                    <li>Join our Discord server: <a href="https://discord.gg/pBh4rRK3TT" target="_blank" rel="noopener noreferrer">discord.gg/pBh4rRK3TT</a></li>
+                    <li>Visit our website: <a href="https://carapuz201.github.io" target="_blank" rel="noopener noreferrer">carapuz201.github.io</a></li>
+                    <li>Email us: <a href="mailto:carapuz201@gmail.com">carapuz201@gmail.com</a></li>
+                </ul>
             </div>
 
         </div>
 
-        <!-- DIVIDER -->
+        <!-- ===== DIVIDER ===== -->
         <hr class="divider">
 
-        <!-- ===================== -->
-        <!-- TERMS OF SERVICE      -->
-        <!-- ===================== -->
+        <!-- ============================================ -->
+        <!-- TERMS OF SERVICE                             -->
+        <!-- ============================================ -->
         <div id="terms-of-service">
 
             <div class="doc-header">
@@ -926,7 +1022,7 @@
                 </div>
             </div>
 
-            <!-- Section 1 -->
+            <!-- ToS 1 -->
             <div class="section">
                 <h2><span class="num">1.</span> Acceptance of Terms</h2>
                 <p>
@@ -936,21 +1032,24 @@
                 </p>
             </div>
 
-            <!-- Section 2 -->
+            <!-- ToS 2 -->
             <div class="section">
                 <h2><span class="num">2.</span> Description of Service</h2>
                 <p>Carapuz201G is a multi-purpose Discord bot that provides the following features:</p>
                 <ul>
                     <li><strong>Server moderation</strong> — warnings, bans, mutes, logging, anti-raid protection, and more.</li>
+                    <li><strong>Virtual economy</strong> — currency, shops, casino, workers, investments, quests.</li>
                     <li><strong>Music playback</strong> — play music in voice channels.</li>
                     <li><strong>Text translation</strong> — translate text between languages.</li>
-                    <li><strong>Internet search</strong> — find information online.</li>
-                    <li><strong>AI-powered assistant</strong> — designed to help users quickly find answers to questions.</li>
+                    <li><strong>Internet search</strong> — find information online via Google Custom Search.</li>
+                    <li><strong>AI-powered assistant</strong> — local AI (Ollama) and Google Gemini for answering questions, summarizing, correcting text, weather, and news.</li>
+                    <li><strong>Verification</strong> — Roblox/Steam account linking.</li>
+                    <li><strong>Cmail</strong> — opt-in messaging system between users.</li>
                 </ul>
-                <p>The Bot uses <strong>external APIs and AI services</strong> to deliver its functionality.</p>
+                <p>The Bot uses <strong>local AI (Ollama)</strong> and <strong>external APIs (Google Gemini, Google Custom Search)</strong> to deliver its functionality.</p>
             </div>
 
-            <!-- Section 3 -->
+            <!-- ToS 3 -->
             <div class="section">
                 <h2><span class="num">3.</span> Eligibility</h2>
                 <p>
@@ -959,7 +1058,7 @@
                 </p>
             </div>
 
-            <!-- Section 4 -->
+            <!-- ToS 4 -->
             <div class="section">
                 <h2><span class="num">4.</span> Donations</h2>
                 <p>
@@ -972,17 +1071,19 @@
                 </div>
             </div>
 
-            <!-- Section 5 -->
+            <!-- ToS 5 -->
             <div class="section">
                 <h2><span class="num">5.</span> Prohibited Use</h2>
                 <p>When using the Bot, you agree <strong>NOT</strong> to:</p>
                 <ul>
                     <li><strong>Spam</strong> commands or interactions with the Bot.</li>
-                    <li><strong>Abuse or exploit</strong> the Bot's features in any way.</li>
+                    <li><strong>Abuse or exploit</strong> the Bot's features in any way (including the economy system).</li>
                     <li><strong>Violate Discord's Terms of Service</strong> or Community Guidelines while using the Bot.</li>
                     <li><strong>Manipulate the AI</strong> to produce aggressive, harmful, offensive, or inappropriate responses.</li>
                     <li><strong>Override the AI's intended behavior</strong> by giving it instructions to respond according to your own rules, bypass its guidelines, or act outside its designed purpose.</li>
                     <li><strong>Use the AI for any purpose other than its intended function</strong> — which is to help users quickly find answers to questions.</li>
+                    <li><strong>Exploit the economy system</strong> — including using bugs, automation, or other unfair means to gain virtual currency or advantages.</li>
+                    <li><strong>Abuse the Cmail system</strong> — including sending spam, harassment, or unsolicited messages.</li>
                     <li>Attempt to <strong>reverse-engineer, overload, or interfere</strong> with the Bot's operation.</li>
                     <li>Use the Bot for any <strong>illegal activity</strong> under applicable law.</li>
                 </ul>
@@ -992,25 +1093,27 @@
                 </div>
             </div>
 
-            <!-- Section 6 -->
+            <!-- ToS 6 -->
             <div class="section">
                 <h2><span class="num">6.</span> Data and Privacy</h2>
                 <p>By using the Bot, you acknowledge and agree that:</p>
                 <ul>
-                    <li>The Bot collects and processes data as described in our <a href="#privacy-policy" style="color: #e94560;">Privacy Policy</a>.</li>
-                    <li>All stored data is <strong>encrypted at rest</strong>.</li>
+                    <li>The Bot collects and processes data as described in our <a href="#privacy-policy">Privacy Policy</a>.</li>
+                    <li>All stored data is <strong>encrypted at rest</strong> using AES-256-CBC with HMAC-SHA256.</li>
                     <li>You may delete your personal data at any time using the <strong>/deletedata</strong> command.</li>
-                    <li>Moderation records (warnings, bans, mutes) are server administrative data and are not subject to individual user deletion requests.</li>
+                    <li>You may report bugs or violations using the <strong>/bugreport</strong> command.</li>
+                    <li>We do <strong>NOT</strong> use your data to train AI models.</li>
                 </ul>
             </div>
 
-            <!-- Section 7 -->
+            <!-- ToS 7 -->
             <div class="section">
                 <h2><span class="num">7.</span> Enforcement and Termination</h2>
                 <p>We reserve the right to:</p>
                 <ul>
                     <li><strong>Block any user</strong> from using the Bot, at our sole discretion, with or without notice.</li>
                     <li><strong>Block the Bot's functionality on any server</strong>, at our sole discretion, with or without notice.</li>
+                    <li><strong>Reset or remove economy data</strong> of users who exploit the economy system.</li>
                     <li><strong>Terminate or suspend</strong> the Bot's service entirely at any time.</li>
                 </ul>
                 <p>
@@ -1019,7 +1122,7 @@
                 </p>
             </div>
 
-            <!-- Section 8 -->
+            <!-- ToS 8 -->
             <div class="section">
                 <h2><span class="num">8.</span> Availability and Uptime</h2>
                 <ul>
@@ -1027,10 +1130,11 @@
                     <li><strong>We do not guarantee</strong> uninterrupted, continuous, or error-free operation.</li>
                     <li>The Bot <strong>may go offline at any time</strong> without prior notice for any reason, including but not limited to: maintenance, updates, technical failures, or discontinuation.</li>
                     <li>We are <strong>not liable</strong> for any damages or losses resulting from downtime or unavailability.</li>
+                    <li><strong>Virtual economy data</strong> (balance, items, investments) has no real-world value and may be lost due to technical issues. We are not responsible for any loss of virtual data.</li>
                 </ul>
             </div>
 
-            <!-- Section 9 -->
+            <!-- ToS 9 -->
             <div class="section">
                 <h2><span class="num">9.</span> Limitation of Liability</h2>
                 <p>To the fullest extent permitted by law:</p>
@@ -1039,20 +1143,26 @@
                     <li>We are <strong>not responsible</strong> for any direct, indirect, incidental, or consequential damages arising from the use or inability to use the Bot.</li>
                     <li>We are <strong>not responsible</strong> for any actions taken by the AI, including inaccurate or misleading responses.</li>
                     <li>We are <strong>not responsible</strong> for any data loss, server issues, or moderation actions performed by the Bot.</li>
+                    <li>We are <strong>not responsible</strong> for the content of messages sent through the Cmail system.</li>
                 </ul>
             </div>
 
-            <!-- Section 10 -->
+            <!-- ToS 10 -->
             <div class="section">
                 <h2><span class="num">10.</span> Third-Party Services</h2>
+                <p>The Bot relies on the following third-party services:</p>
+                <ul>
+                    <li><strong>Ollama</strong> — local AI model for AI channel responses (processed locally, no data sent externally).</li>
+                    <li><strong>Google Gemini API</strong> — for <code>/correct</code>, <code>/summarize</code>, <code>/ask</code>, <code>/weather</code>, <code>/news</code> commands.</li>
+                    <li><strong>Google Custom Search API</strong> — for <code>/search</code> command.</li>
+                </ul>
                 <p>
-                    The Bot relies on third-party APIs and AI services. We are <strong>not responsible</strong>
-                    for the availability, accuracy, or conduct of these third-party services.
+                    We are <strong>not responsible</strong> for the availability, accuracy, or conduct of these third-party services.
                     Use of features powered by third parties is also subject to their respective terms and policies.
                 </p>
             </div>
 
-            <!-- Section 11 -->
+            <!-- ToS 11 -->
             <div class="section">
                 <h2><span class="num">11.</span> Governing Law</h2>
                 <p>
@@ -1061,7 +1171,7 @@
                 </p>
             </div>
 
-            <!-- Section 12 -->
+            <!-- ToS 12 -->
             <div class="section">
                 <h2><span class="num">12.</span> Changes to These Terms</h2>
                 <p>
@@ -1073,9 +1183,7 @@
 
         </div>
 
-        <!-- ===================== -->
-        <!-- CONTACT               -->
-        <!-- ===================== -->
+        <!-- ===== CONTACT ===== -->
         <div id="contact" style="margin-top: 50px;">
             <div class="contact-box">
                 <h2>📬 Contact</h2>
@@ -1083,12 +1191,13 @@
                 <p><strong>Discord:</strong> <a href="https://discord.com/users/carapuz201">carapuz201</a></p>
                 <p><strong>Support Server:</strong> <a href="https://discord.gg/pBh4rRK3TT" target="_blank" rel="noopener noreferrer">discord.gg/pBh4rRK3TT</a></p>
                 <p><strong>Official Website:</strong> <a href="https://carapuz201.github.io" target="_blank" rel="noopener noreferrer">carapuz201.github.io</a></p>
+                <p><strong>In-Bot Support:</strong> Use the <strong>/support</strong> or <strong>/bugreport</strong> command</p>
             </div>
         </div>
 
     </div>
 
-    <!-- FOOTER -->
+    <!-- ===== FOOTER ===== -->
     <footer>
         <p>&copy; 2026 <a href="https://carapuz201.github.io">Carapuz201G</a>. All rights reserved.</p>
         <p style="margin-top: 5px;">Operated by carapuz201</p>
